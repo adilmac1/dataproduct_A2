@@ -1,0 +1,20 @@
+
+---
+title: "Data Product Assignment 2"
+author: "A. C."
+date: "July 9, 2017"
+output: html_document
+---
+
+
+---
+title: "Iris"
+---
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+library(plotly)
+data("iris")
+
+p <- plot_ly(x = iris$Sepal.Length, y = iris$Petal.Length, mode = "markers", color = iris$Species)  %>%
+  layout(title = "Iris", xaxis = list(title = "Sepal.Length"), yaxis = list(title = "Pedal.Length") )
+p
+```
